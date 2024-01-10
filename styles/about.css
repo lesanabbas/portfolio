@@ -1,0 +1,76 @@
+.about {
+  padding: 160px 0;
+}
+
+/* ---------------------------------- TEXT SECTION : ABOUT ------------------------------*/
+
+.about .job {
+  margin-top: 36px;
+}
+
+.about .job-title {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.about .job-title span {
+  font-weight: 600;
+}
+
+.job .para {
+  text-wrap: balance;
+}
+
+.para {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------------- TAGS SECTION : ABOUT ------------------------------*/
+
+.tags {
+  list-style: none;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 120px;
+  margin: 0 auto;
+}
+
+.tags .tag {
+  line-height: 1;
+  margin: 12px;
+  padding: 6px 14px;
+
+  background: rgb(244, 240, 240);
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-out;
+}
+
+/* -========================================== MEDIA QUERY ======================================== */
+
+@media only screen and (max-width: 992px) {
+  .about .tags {
+    margin-top: 60px;
+    padding: 0;
+  }
+
+  .about .tag {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .about .col {
+    min-width: 100%;
+  }
+}

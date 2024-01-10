@@ -1,0 +1,56 @@
+.header {
+  height: 70vh;
+  margin-bottom: 180px;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-text .greeting {
+  font-weight: 300;
+  font-size: 3.6rem;
+}
+
+.header-text .name {
+  font-weight: 600;
+  font-size: 6.6rem;
+
+  white-space: nowrap;
+
+  margin: 12px 0 16px 0;
+}
+
+.header-text .intro {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.45;
+}
+
+/* -========================================== MOBILE MEDIA QUERY ======================================== */
+
+@media only screen and (max-width: 720px) {
+  .header-text .name {
+    font-size: 4.8rem;
+  }
+
+  .header-text .greeting {
+    font-size: 3.6rem;
+  }
+
+  .header-text .intro {
+    font-size: 2.4rem;
+  }
+
+  .intro-break {
+    display: none;
+  }
+}
