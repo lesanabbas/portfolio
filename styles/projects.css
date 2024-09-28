@@ -62,6 +62,10 @@
   font-weight: 500;
 }
 
+.project-link {
+  margin-right: 10px;
+}
+
 .project-cover {
   position: absolute;
   z-index: -1;
