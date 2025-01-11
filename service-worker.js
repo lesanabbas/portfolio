@@ -5,30 +5,36 @@ const urlsToCache = [
   '/styles.css',
   '/scripts.js',
   '/images/profile.jpg',
+  '/offline.html'
   // Add all other assets that need to be cached here
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('Opened cache');
+      return cache.addAll(urlsToCache);
+    })
   );
 });
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response; // Return the cached response
-        }
-        return fetch(event.request); // Fetch from the network
-      })
+    caches.match(event.request).then((response) => {
+      // Return the cached response if found
+      if (response) {
+        return response;
+      }
+
+      // Attempt to fetch from the network
+      return fetch(event.request).catch(() => {
+        // If the fetch fails (e.g., offline), serve the offline page
+        return caches.match('/offline.html');
+      });
+    })
   );
 });
+
 
 self.addEventListener('activate', (event) => {
   const cacheWhitelist = [CACHE_NAME];
