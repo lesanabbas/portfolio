@@ -1,59 +1,95 @@
 .about {
-  padding: 160px 0;
+  padding: 120px 0 140px;
+  border-bottom: 1px solid var(--clr-200);
+}
+
+.about .row {
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.about .about-text {
+  min-width: 0;
+}
+
+.about .skills {
+  min-width: 280px;
+  max-width: 320px;
+  padding-top: 4px;
 }
 
 /* ---------------------------------- TEXT SECTION : ABOUT ------------------------------*/
 
+.para {
+  font-size: 1.8rem;
+  line-height: 1.75;
+  color: var(--clr-600);
+  margin-bottom: 2rem;
+}
+
 .about .job {
-  margin-top: 36px;
+  margin-top: 0;
+  padding: 32px 0 32px 24px;
+  border-left: 2px solid var(--clr-200);
+  border-bottom: 1px solid var(--clr-100);
+  margin-bottom: 4px;
+  transition: border-left-color 0.2s ease;
+}
+
+.about .job:hover {
+  border-left-color: var(--clr-800);
 }
 
 .about .job-title {
-  font-size: 1.8rem;
-  margin-bottom: 12px;
-  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: var(--clr-900);
+  line-height: 1.3;
 }
 
 .about .job-title span {
-  font-weight: 600;
+  font-weight: 500;
+  color: var(--clr-600);
 }
 
 .job .para {
-  text-wrap: balance;
-}
-
-.para {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  line-height: 1.7;
 }
 
 /* ---------------------------------- TAGS SECTION : ABOUT ------------------------------*/
 
 .tags {
   list-style: none;
-
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-
-  padding-left: 120px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0;
+  gap: 10px;
   margin: 0 auto;
 }
 
 .tags .tag {
   line-height: 1;
-  margin: 12px;
-  padding: 6px 14px;
-
-  background: rgb(244, 240, 240);
-  border-radius: 6px;
-  font-size: 1.5rem;
+  padding: 8px 16px;
+  background: var(--clr-100);
+  color: var(--clr-800);
+  border: 1px solid var(--clr-200);
+  border-radius: 4px;
+  font-size: 1.4rem;
   font-weight: 500;
+  cursor: default;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
 
-  cursor: pointer;
-
-  transition: all 0.3s ease-out;
+.tags .tag:hover {
+  background: var(--clr-900);
+  color: var(--clr-white);
+  border-color: var(--clr-900);
 }
 
 /* -========================================== MEDIA QUERY ======================================== */
@@ -61,11 +97,6 @@
 @media only screen and (max-width: 992px) {
   .about .tags {
     margin-top: 60px;
-    padding: 0;
-  }
-
-  .about .tag {
-    margin: 10px;
   }
 }
 

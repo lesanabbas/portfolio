@@ -37,12 +37,12 @@
     <link
       rel="mask-icon"
       href="./img/favicons/safari-pinned-tab.svg"
-      color="#5bbad5"
+      color="#000000"
     />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -50,8 +50,10 @@
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/navigation.css" />
     <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/marquee.css" />
     <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/products.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
 
     <title>Lesan Abbas | Software Engineer</title>
@@ -90,88 +92,103 @@
     <section class="header">
       <div class="container">
         <div class="header-text">
-          <h5 class="greeting wrapped">Hey! I'm</h5>
+          <p class="greeting wrapped">Software Engineer</p>
           <h1 class="name wrapped">Lesan Abbas</h1>
-          <h1 class="intro wrapped">
-            Software Developer at Coneio Exim, a curious<br
+          <div class="header-divider"></div>
+          <p class="intro wrapped">
+            Software Engineer at HashedIn by Deloitte.<br
               class="intro-break"
             />
-            learner and a tinkerer.
-          </h1>
+            Building AI systems, data pipelines, and enterprise backend infrastructure.
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- Marquee strip -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>Python</span><span class="marquee-sep">·</span>
+        <span>Django</span><span class="marquee-sep">·</span>
+        <span>Kafka</span><span class="marquee-sep">·</span>
+        <span>PySpark</span><span class="marquee-sep">·</span>
+        <span>Agentic&nbsp;AI</span><span class="marquee-sep">·</span>
+        <span>MCP&nbsp;Servers</span><span class="marquee-sep">·</span>
+        <span>Langfuse</span><span class="marquee-sep">·</span>
+        <span>Docker</span><span class="marquee-sep">·</span>
+        <span>PostgreSQL</span><span class="marquee-sep">·</span>
+        <span>GraphQL</span><span class="marquee-sep">·</span>
+        <span>REST&nbsp;APIs</span><span class="marquee-sep">·</span>
+        <span>Linux</span><span class="marquee-sep">·</span>
+        <span>COBOL</span><span class="marquee-sep">·</span>
+        <span>Microservices</span><span class="marquee-sep">·</span>
+        <span>Python</span><span class="marquee-sep">·</span>
+        <span>Django</span><span class="marquee-sep">·</span>
+        <span>Kafka</span><span class="marquee-sep">·</span>
+        <span>PySpark</span><span class="marquee-sep">·</span>
+        <span>Agentic&nbsp;AI</span><span class="marquee-sep">·</span>
+        <span>MCP&nbsp;Servers</span><span class="marquee-sep">·</span>
+        <span>Langfuse</span><span class="marquee-sep">·</span>
+        <span>Docker</span><span class="marquee-sep">·</span>
+        <span>PostgreSQL</span><span class="marquee-sep">·</span>
+        <span>GraphQL</span><span class="marquee-sep">·</span>
+        <span>REST&nbsp;APIs</span><span class="marquee-sep">·</span>
+        <span>Linux</span><span class="marquee-sep">·</span>
+        <span>COBOL</span><span class="marquee-sep">·</span>
+        <span>Microservices</span><span class="marquee-sep">·</span>
+      </div>
+    </div>
+
     <section class="projects">
       <div>
-        <h5 class="heading-title">&#8212; Some of my</h5>
-        <h3 class="section-heading">Featured Works</h3>
+        <h5 class="heading-title">Selected work</h5>
+        <h3 class="section-heading">Featured Projects</h3>
       </div>
       <div class="projects-listing">
         <div class="project">
-          <img src="https://raw.githubusercontent.com/lesanabbas/Virtual-Voice-Assistant/refs/heads/main/Screenshot%202022-04-23%20175915.png" alt="" srcset="">
+          <img src="https://raw.githubusercontent.com/lesanabbas/Virtual-Voice-Assistant/refs/heads/main/Screenshot%202022-04-23%20175915.png" alt="Virtual Voice Assistant screenshot">
           <div class="project-meta">
+            <p class="project-index">01</p>
             <h4 class="project-title">Virtual Voice Assistant</h4>
             <p class="project-description">
-              The Virtual Voice Assistant project is a Python-based application employing PyQt5 and QT Designer to enable hands-free automation of Windows Desktop/Laptop tasks through voice commands
+              Python application using PyQt5 and QT Designer to enable hands-free automation of Windows tasks through voice commands.
             </p>
-            <p class="project-technologies">
-              Python / PyQt5 / QT Designer
-            </p>
-            <a class="project-link project-technologies" href="https://github.com/lesanabbas/Virtual-Voice-Assistant" target="_blank">
-              <span>
-                Source code
-              </span>
-            </a>
-            <!-- <a class="project-link project-technologies" href="http://bytelink.onrender.com/" target="_blank">
-              <span>
-                Live link
-              </span>
-            </a> -->
+            <p class="project-technologies">Python &middot; PyQt5 &middot; QT Designer</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/lesanabbas/Virtual-Voice-Assistant" target="_blank">Source code</a>
+            </div>
           </div>
           <div class="project-cover"></div>
         </div>
 
         <div class="project">
-          <img src="https://i.ibb.co/KsNczSr/url-shortner.png" alt="url-shortner"/></a>
+          <img src="https://i.ibb.co/KsNczSr/url-shortner.png" alt="URL Shortener screenshot">
           <div class="project-meta">
-            <h4 class="project-title">Url Shortener</h4>
+            <p class="project-index">02</p>
+            <h4 class="project-title">URL Shortener</h4>
             <p class="project-description">
-              Designed and implemented a URL shortener using Python and Django, optimizing web addresses for improved accessibility and enhancing the user experience in link sharing.
+              URL shortener built with Python and Django — optimizing web addresses for improved accessibility and link sharing.
             </p>
-            <p class="project-technologies">
-              Python / Django / PostgreSQL
-            </p>
-            <a class="project-link project-technologies" href="https://github.com/lesanabbas/Django-UrlShortener" target="_blank">
-              <span>
-                Source code
-              </span>
-            </a>
-            <a class="project-link project-technologies" href="http://bytelink.onrender.com/" target="_blank">
-              <span>
-                Live link
-              </span>
-            </a>
+            <p class="project-technologies">Python &middot; Django &middot; PostgreSQL</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/lesanabbas/Django-UrlShortener" target="_blank">Source code</a>
+              <a class="project-link" href="http://bytelink.onrender.com/" target="_blank">Live link</a>
+            </div>
           </div>
         </div>
 
         <div class="project">
           <div class="project-meta">
+            <p class="project-index">03</p>
             <h4 class="project-title">Connectify API</h4>
             <p class="project-description">
-              This is a scalable and secure social networking application API built using Django Rest Framework. It includes functionalities such as user management, friend request handling, notifications, and activity logging.
+              Scalable social networking REST API with user management, friend requests, notifications, and activity logging.
             </p>
-            <p class="project-technologies">Python / Django / PostgreSQL</p>
-            <a class="project-link project-technologies" href="https://github.com/lesanabbas/Connectify" target="_blank">
-              <span>
-                Source code
-              </span>
-            </a>
-            <a class="project-link project-technologies" href="http://social-media-9nzi.onrender.com/" target="_blank">
-              <span>
-                Live link
-              </span>
-            </a>
+            <p class="project-technologies">Python &middot; Django &middot; PostgreSQL</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/lesanabbas/Connectify" target="_blank">Source code</a>
+              <a class="project-link" href="http://social-media-9nzi.onrender.com/" target="_blank">Live link</a>
+            </div>
           </div>
         </div>
 
@@ -211,15 +228,35 @@
       </div>
     </section>
 
+    <!-- Products Section -->
+    <section class="products">
+      <div class="container">
+        <h5 class="heading-title">Products</h5>
+        <h3 class="section-heading">Things I've Shipped</h3>
+
+        <div class="products-list">
+          <a class="product-item" href="https://microsoftedge.microsoft.com/addons/detail/grabify/ljpkphpmbbkdjnbnhmeekbcngbnfkeoe" target="_blank">
+            <div class="product-item__header">
+              <span class="product-item__num">01</span>
+              <span class="product-item__name">Grabify</span>
+              <span class="product-item__arrow">&#8599;</span>
+            </div>
+            <p class="product-item__desc">Published on the Microsoft Edge Add-ons marketplace — a browser extension built for the Edge platform.</p>
+            <p class="product-item__tech">JavaScript &middot; Browser Extension API &middot; Microsoft Edge</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="about">
       <div class="container">
         <div class="row">
           <div class="col about-text">
-            <h5 class="heading-title">&#8212; Just a little</h5>
+            <h5 class="heading-title">About</h5>
             <h3 class="section-heading">About Me</h3>
 
             <p class="para">
-              I am a Software Engineer, currently working at Coneio Exim Private Limited, where playing with web technologies is a part of my work.
+              I'm a Software Engineer currently at HashedIn by Deloitte, where I work on AI systems, data pipelines, and backend infrastructure.
             </p>
             <p class="para">
               Always have had an immense interest in electronic devices and
@@ -232,6 +269,27 @@
 
             <div class="work-experience">
               <h4 class="section-sub-heading">Work Experience</h4>
+
+              <div class="job">
+                <h4 class="job-title">
+                  SDE-2
+                  <span
+                    ><a
+                      href="https://hashedin.com/"
+                      target="_blank"
+                      class="link"
+                      >@HashedIn by Deloitte</a
+                    ></span
+                  >
+                </h4>
+                <p class="para">
+                  Currently working on data and AI engineering initiatives
+                  <br>&#8212; Developed Agentic AI workflows and MCP server integrations
+                  <br>&#8212; Built data pipelines using Kafka, Pandas, and PySpark
+                  <br>&#8212; Integrated Langfuse for LLM observability and tracing
+                  <br>&#8212; Worked on Mainframe modernisation (COBOL) and the CUA plugin
+                </p>
+              </div>
 
               <div class="job">
                 <h4 class="job-title">
@@ -279,6 +337,7 @@
           </div>
 
           <div class="col skills">
+            <h5 class="heading-title" style="margin-bottom:20px;">Technologies</h5>
             <ul class="tags">
               <li class="tag">Python</li>
               <li class="tag">JavaScript</li>

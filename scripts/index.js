@@ -39,9 +39,10 @@ $(window).on("load", () => {
   // Create Navigation
   $("nav").append(`
 <ul>
-	<li class="to-projects"><a href="#">My Projects</a></li>
-	<li class="to-about"><a href="#">About Me</a></li>
-	<li class="to-contact"><a href="#">Say Hi!</a></li>
+	<li class="to-projects"><a href="#">Projects</a></li>
+	<li class="to-products"><a href="#">Products</a></li>
+	<li class="to-about"><a href="#">About</a></li>
+	<li class="to-contact"><a href="#">Contact</a></li>
 	<li>
 		<button
 			title="Download Resume"
@@ -50,7 +51,7 @@ $(window).on("load", () => {
 			<img
 				src="./img/resume.svg"
 				alt="Download Resume"
-                title="Resume"
+        title="Resume"
 			/>
 		</button>
 	</li>
@@ -85,16 +86,8 @@ $(window).on("load", () => {
     },
   });
 
-  // Navigation
-
+  // Navigation scroll scenes
   const controller = new ScrollMagic.Controller();
-
-  new ScrollMagic.Scene({
-    triggerElement: "section.about",
-    duration: $("section.about").height(),
-  })
-    .setClassToggle(".to-about", "active")
-    .addTo(controller);
 
   new ScrollMagic.Scene({
     triggerElement: "section.projects",
@@ -104,29 +97,48 @@ $(window).on("load", () => {
     .addTo(controller);
 
   new ScrollMagic.Scene({
+    triggerElement: "section.products",
+    duration: $("section.products").height(),
+  })
+    .setClassToggle(".to-products", "active")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "section.about",
+    duration: $("section.about").height(),
+  })
+    .setClassToggle(".to-about", "active")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
     triggerElement: "section.footer",
     duration: $("section.footer").height(),
   })
     .setClassToggle(".to-contact", "active")
     .addTo(controller);
 
+  // Nav click handlers
   $(".to-projects").on("click", (e) => {
     e.preventDefault();
-    $("section.projects")[0].scrollIntoView();
+    $("section.projects")[0].scrollIntoView({ behavior: "smooth" });
+  });
+
+  $(".to-products").on("click", (e) => {
+    e.preventDefault();
+    $("section.products")[0].scrollIntoView({ behavior: "smooth" });
   });
 
   $(".to-about").on("click", (e) => {
     e.preventDefault();
-    $("section.about")[0].scrollIntoView();
+    $("section.about")[0].scrollIntoView({ behavior: "smooth" });
   });
 
   $(".to-contact").on("click", (e) => {
     e.preventDefault();
-    $("section.footer")[0].scrollIntoView();
+    $("section.footer")[0].scrollIntoView({ behavior: "smooth" });
   });
 
-  // Side Navigation
-
+  // Side Navigation transition (top nav out, side nav in on scroll past hero)
   const sideNavTL = gsap.timeline();
 
   sideNavTL

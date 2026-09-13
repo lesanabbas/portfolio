@@ -1,53 +1,83 @@
 .header {
-  height: 70vh;
-  margin-bottom: 180px;
+  min-height: calc(100vh - 128px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0 60px;
+  border-bottom: 1px solid var(--clr-200);
 }
 
 .header .container {
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .header-text {
-  text-align: center;
+  text-align: left;
 }
 
 .header-text .greeting {
-  font-weight: 300;
-  font-size: 3.6rem;
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-400);
+  margin-bottom: 20px;
+  font-family: "Space Grotesk", "Inter", sans-serif;
 }
 
 .header-text .name {
-  font-weight: 600;
-  font-size: 6.6rem;
-
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(5.2rem, 9.5vw, 11.2rem);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--clr-900);
   white-space: nowrap;
+  margin: 0 0 36px 0;
+}
 
-  margin: 12px 0 16px 0;
+.header-divider {
+  width: 56px;
+  height: 2px;
+  background: var(--clr-300);
+  margin-bottom: 28px;
 }
 
 .header-text .intro {
   font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 1.45;
+  font-size: 1.9rem;
+  line-height: 1.65;
+  color: var(--clr-600);
+  max-width: 520px;
 }
 
 /* -========================================== MOBILE MEDIA QUERY ======================================== */
 
-@media only screen and (max-width: 720px) {
-  .header-text .name {
-    font-size: 4.8rem;
+@media only screen and (max-width: 992px) {
+  .header .container {
+    width: 90%;
   }
 
+  .header {
+    min-height: calc(100vh - 128px);
+    padding: 32px 0 48px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
   .header-text .greeting {
-    font-size: 3.6rem;
+    font-size: 1.5rem;
+  }
+
+  .header-text .name {
+    white-space: normal;
+    font-size: clamp(4.4rem, 12vw, 5.6rem);
   }
 
   .header-text .intro {
-    font-size: 2.4rem;
+    font-size: 1.7rem;
   }
 
   .intro-break {

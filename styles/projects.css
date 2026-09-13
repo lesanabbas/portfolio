@@ -1,79 +1,158 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 .projects {
-  padding: 62px 0;
-  background-color: rgb(242, 245, 246);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  padding: 100px 0;
+  background-color: var(--clr-white);
+  border-bottom: 1px solid var(--clr-200);
+}
+
+.projects > div:first-child {
+  width: 80%;
+  margin: 0 auto 8px;
+}
+
+@media only screen and (max-width: 992px) {
+  .projects > div:first-child {
+    width: 90%;
+  }
 }
 
 .projects-listing {
   display: flex;
   width: 100%;
-  overflow: scroll;
+  overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  gap: 48px;
+  gap: 24px;
   padding: 48px 10%;
+  align-items: stretch;
 }
 
 .projects-listing::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none;
 }
+
+/* ---------------------------------------- Project Card ---------------------------------------- */
 
 .project {
   cursor: pointer;
-  min-width: 480px;
-  height: 560px;
-  background-color: #fff;
-  border-radius: 24px;
+  min-width: clamp(300px, 75vw, 440px);
+  background-color: var(--clr-white);
+  border-radius: 12px;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  border: 1px solid var(--clr-200);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  aspect-ratio: 4 / 5;
+  height: auto;
+}
+
+.project:hover {
+  border-color: var(--clr-400);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+  transform: translateY(-4px);
 }
 
 .project-meta {
-  padding: 36px;
+  padding: 28px 32px 32px;
+  position: relative;
+  z-index: 2;
+  background: var(--clr-white);
+  border-top: 1px solid var(--clr-200);
+}
+
+.project-index {
+  font-size: 1.1rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  color: var(--clr-400);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
 }
 
 .project-title {
-  font-size: 3.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: rgba(0, 0, 0, 0.77);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  color: var(--clr-900);
+  line-height: 1.15;
 }
 
 .project-description {
-  font-size: 1.6rem;
-  max-width: 420px;
-  line-height: 1.36;
-  color: rgba(0, 0, 0, 0.57);
-  margin-bottom: 24px;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: var(--clr-600);
+  margin-bottom: 16px;
+  max-width: 380px;
 }
 
 .project-technologies {
-  font-size: 1.4rem;
-  font-family: "IBM Plex Mono";
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  color: var(--clr-400);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .project-link {
-  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  font-size: 1.2rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--clr-300);
+  color: var(--clr-800);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-link:hover {
+  background: var(--clr-900);
+  color: var(--clr-white);
+  border-color: var(--clr-900);
+}
+
+/* Image area */
+.project > img {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 55%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: top;
 }
 
 .project-cover {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .project-cover img {
-  width: 80px;
-  margin: 36px;
+  width: 64px;
+  margin: 28px;
 }
